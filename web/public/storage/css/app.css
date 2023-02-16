@@ -113,6 +113,8 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card {
@@ -120,10 +122,14 @@ h3 {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
+    width: 650px;
+    margin-top: 20px;
+    aspect-ratio: 16/9;
 }
 
+.card:hover {
+    box-shadow: 0 0 50px rgba(33,33,33,.2);
+}
 
 .image {
     width: 100%;
@@ -136,16 +142,37 @@ h3 {
 }
 
 .product_title {
-    margin: 5px 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    margin: 10px;
 }
 
-.dispo {
-    margin: 10px 0;
-}
 
-#price {
+.card #price {
     font-weight: bold;
     color: #ff4500;
+    align-items: center;
+    vertical-align: center;
+
+}
+
+
+
+.pagination{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    align-items: center;
 }
 
 #prix {
@@ -181,11 +208,13 @@ h3 {
     margin-left: 80px;
 }
 
+.quantite {
+    margin: 0 10px;
+    display: flex;
+}
 
 
-
-
-
-
-
-
+a {
+    text-decoration: none;
+    color: #000;
+}
