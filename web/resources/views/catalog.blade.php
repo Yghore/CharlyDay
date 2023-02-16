@@ -4,8 +4,9 @@
 <div class="cards">
     @foreach($products as $product)
         <div class="card">
+            <a href="{{route('product', ['id' => $product->id])}}">
             <div class="image">
-                <img src="{{ '/storage/img/'.$product->product_id.'.jpg' }}" alt="{{ $product->nom }}">
+                <img src="{{ '/storage/img/'.$product->id.'.jpg' }}" alt="{{ $product->nom }}">
             </div>
 
             <div class="infos">
@@ -17,6 +18,7 @@
                     <p id="price">{{ $product->prix}}€</p>
                 @endif
             </div>
+            </a>
         </div>
     @endforeach
 
