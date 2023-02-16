@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\cartController;
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -37,3 +38,10 @@ Route::controller(CartController::class)->group(function (){
     Route::get('cart/confirm', 'validateCart')->name('cart.confirm');
     Route::get('cart/validatation', 'confirmOrder')->name('cart.validate');
 });
+
+Route::controller(CatalogController::class)->group(function (){
+   Route::get('/catalog/{page?}', 'index');
+});
+
+
+//Route::get('product/{id}')->name('product');
