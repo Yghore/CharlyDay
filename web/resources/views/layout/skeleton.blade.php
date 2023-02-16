@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--  Links  -->
-    <link rel="stylesheet" href="storage/{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="/storage{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Martel&display=swap" rel="stylesheet">
@@ -31,16 +31,11 @@
 <!--  Main  -->
 <main>
     <!--  Background Image  -->
-    <div class="background-image">
-        <div class="vignette"></div>
-        <div class="background-image__text">
-            <h2>Bienvenue <br> à <br> court-circuit Nancy</h2>
-            <h3>le local à vivre</h3>
-        </div>
-    </div>
+    <div class="background-image" style="max-height: 5px;"></div>
 
     <!--  Catalog  -->
     <div class="container">
+        @yield('app')
         @yield('products')
         @yield('catalog')
     </div>

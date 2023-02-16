@@ -52,7 +52,7 @@ class CartController extends Controller
         $order->save();
 
         foreach ($carts as $cart){
-            $order->products()->attach(['product_id' => $cart]);
+            $order->products()->attach(['id' => $cart]);
 
         }
 

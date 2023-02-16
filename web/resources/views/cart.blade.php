@@ -1,6 +1,6 @@
 @extends('layouts.skeleton')
 
-@section('cart')
+@section('app')
 
 <div class="products">
 
