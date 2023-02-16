@@ -14,11 +14,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/test', 'index');
+    Route::get('/test', 'index')->name('test');
+    Route::get('/home', 'home')->name('home');
 });
 
 Route::controller(\App\Http\Controllers\CatalogController::class)->group(function (){
