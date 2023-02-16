@@ -15,7 +15,7 @@ class ProductController extends Controller
     }
 
 
-    public function addProductToCart(Request $request, $id)
+    public function addProductToCart(Request $request, $id, $nombreDarticles)
     {
         $product = Product::find($id);
         if (!$product) {
@@ -27,6 +27,13 @@ class ProductController extends Controller
             } else {
                 //create the table carts in session
                 $carts = collect([]);
+            }
+            foreach ($nombreDarticles as $article) {
+                if ($article->id == $id) {
+                    $article->quantity++;
+                    $request->session()->put('carts', $carts);
+                    return redirect()->route('product', ['id' => $id]);
+                }
             }
             $carts->push($id);
             $request->session()->put('carts', $carts);
