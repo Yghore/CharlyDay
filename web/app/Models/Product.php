@@ -9,6 +9,7 @@ class Product extends Model
 {
     protected $table = 'product';
     protected $primaryKey = 'product_id';
+    
 
     /**
      * The model's default values for attributes.
