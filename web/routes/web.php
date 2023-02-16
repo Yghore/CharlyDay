@@ -17,13 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::controller(HomeController::class)->group(function () {
-    Route::get('/test', 'index');
-});
-
 Route::controller(\App\Http\Controllers\CatalogController::class)->group(function (){
-   Route::get('/catalog/{page?}', 'index');
+    Route::get('/catalog', 'index')->name('catalog');
 });
-
-
-//Route::get('product/{id}')->name('product');

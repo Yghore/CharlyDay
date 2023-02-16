@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class CatalogController extends Controller
 {
-    public function index($page = 1){
-        $productsList = Product::paginate($perPage = 5, $columns = ['*'], $pageName = 'page', $page);
+    public function index()
+    {
+        $productsList = Product::paginate(5);
+        $productsList->appends(['page' => $productsList->currentPage()])->setPath(route('catalog'));
         return view("catalog", ['products' => $productsList]);
-
     }
 }
