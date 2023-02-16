@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class cartController extends Controller
+class CartController extends Controller
 {
     public function validateCart(Request $request)
     {
@@ -23,7 +23,7 @@ class cartController extends Controller
 
         // Get the products in the carts
         $carts = session('carts', []);
-        
+
 
         // Clear the carts$carts
         $request->session()->put('carts', collect([]));
@@ -32,4 +32,3 @@ class cartController extends Controller
         return view('order_confirmation');
     }
 }
-
