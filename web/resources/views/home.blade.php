@@ -21,8 +21,8 @@
             <ul>
                 <li><a href="{{ route('home') }}">Accueil</a></li>
                 <li><a href="">A propos</a></li>
-                <li><a href="">Catalogue</a></li>
-                <li><a href="">Panier</a></li>
+                <li><a href="{{ route('catalog') }}">Catalogue</a></li>
+                <li><a href="{{ route('cart') }}">Panier</a></li>
                 <li><a href="">Connexion</a></li>
             </ul>
         </div>
