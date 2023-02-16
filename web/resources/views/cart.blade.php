@@ -11,7 +11,7 @@
         <p>Poids : {!! $product->poids !!}</p>
         <p>Detail : {!! $product->detail !!}</p>
         <p>Distance : {!! $product->distance !!}</p>
-        <p><span>Latitude : {!! $product->lattitude !!}}</span> <span>Longitude : {{ $product->longitude }}</span></p>
+        <p><span>Latitude : {!! $product->lattitude !!}</span> <span>Longitude : {{ $product->longitude }}</span></p>
         <p>Prix : {!! $product->prix !!}</p>
     </div>
 

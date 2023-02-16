@@ -1,6 +1,10 @@
 @extends('layout.skeleton')
 
 @section('catalog')
+<form action="{{ route('catalog.search') }}" method="GET">
+    <input type="text" name="q" placeholder="Rechercher...">
+    <button type="submit">Rechercher</button>
+</form>
 <div class="cards">
     @foreach($products as $product)
         <div class="card">
