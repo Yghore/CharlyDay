@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Martel&display=swap" rel="stylesheet">
 
-    <title>Home - @yield('title', 'HOme')</title>
+    <title>Home - @yield('title', 'Page')</title>
 </head>
 <body>
 <!--  Header  -->
