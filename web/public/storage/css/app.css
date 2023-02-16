@@ -127,6 +127,10 @@ h3 {
     aspect-ratio: 16/9;
 }
 
+.card:hover {
+    box-shadow: 0 0 50px rgba(33,33,33,.2);
+}
+
 .image {
     width: 100%;
     overflow: hidden;
@@ -151,15 +155,21 @@ h3 {
 
 }
 
-.pagination {
+
+
+.pagination{
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    letter-spacing: 10px;
 }
 
 .infos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 20px;
     align-items: center;
 }
@@ -171,4 +181,10 @@ h3 {
 .quantite {
     margin: 0 10px;
     display: flex;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
 }

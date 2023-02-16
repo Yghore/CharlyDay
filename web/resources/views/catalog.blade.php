@@ -32,10 +32,11 @@
 
     <div class="pagination">
     @if ($products->currentPage() > 1)
-        <a href="{{ $products->previousPageUrl() }}">Page précédente</a>
+        <a href="{{ $products->previousPageUrl() }}"><</a>
     @endif
+        <p> {{ $products->currentPage() }} </p>
     @if ($products->hasMorePages())
-        <a href="{{ $products->nextPageUrl() }}">Page suivante</a>
+        <a href="{{ $products->nextPageUrl() }}">></a>
     @endif
     </div>
 </div>
