@@ -4,3 +4,5 @@ web/app/storage/
 web/public/storage
 .env
 web/composer.lock
+web/.idea/
+*.iml
