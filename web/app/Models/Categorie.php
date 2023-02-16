@@ -10,7 +10,7 @@ class Categorie extends Model
 
 
 
-    protected $table = 'categorie';
+    protected $table = 'categories';
     protected $primaryKey = 'categorie_id';
 
     /**

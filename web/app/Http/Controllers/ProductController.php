@@ -10,13 +10,14 @@ class ProductController extends Controller
 
     public function index($id)
     {
-        $products = Product::get()->where('product_id', $id);
+        $products = Product::get()->where('id', $id);
         return view('products', ['products' => $products]);
     }
 
 
-    public function addProductToCart(Request $request, $id, $nombreDarticles)
+    public function addProductToCart(Request $request, $id)
     {
+        $nombreDarticles = $request->input('quantity');
         $product = Product::find($id);
         if (!$product) {
             url()->previous();
@@ -28,13 +29,7 @@ class ProductController extends Controller
                 //create the table carts in session
                 $carts = collect([]);
             }
-            foreach ($nombreDarticles as $article) {
-                if ($article->id == $id) {
-                    $article->quantity++;
-                    $request->session()->put('carts', $carts);
-                    return redirect()->route('product', ['id' => $id]);
-                }
-            }
+
             $carts->push($id);
             $request->session()->put('carts', $carts);
             return redirect()->route('product', ['id' => $id]);

@@ -19,9 +19,9 @@
 <header>
     <div class="navbar">
         <ul>
-            <li><a href="{{ route('home') }}">Accueil</a></li>
+            <li><a href="">Accueil</a></li>
             <li><a href="">A propos</a></li>
-            <li><a href="">Catalogue</a></li>
+            <li><a href="{{ route('catalog') }}">Catalogue</a></li>
             <li><a href="">Panier</a></li>
             <li><a href="">Connexion</a></li>
         </ul>
@@ -41,7 +41,7 @@
 
     <!--  Catalog  -->
     <div class="container">
-        <h1>yes sir!</h1>
+        @yield('app')
     </div>
 </main>
 </body>
