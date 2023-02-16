@@ -72,7 +72,7 @@
     transform: translate(-50%, -50%);
     color: #F7FFF7;
     text-align: center;
-    z-index: 1;
+    z-index: 0;
 }
 
 h2 {
@@ -100,11 +100,11 @@ h3 {
     transition: all 0.5s;
     cursor: pointer;
 }
-#btn-panier {
+#btn-panier:hover {
     background-color: #148f77;
 }
 
-#btn-panier {
+#btn-panier:active {
     background-color: #117a65;
 }
 
@@ -148,6 +148,44 @@ h3 {
     color: #ff4500;
 }
 
+#prix {
+    font-weight: bold;
+    color: #ff4500;
+    font-size: 20px;
+}
+
 #quantite {
     display : flex;
 }
+
+#produit {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 30px;
+    font-family: 'Martel', serif;
+}
+
+#produit #contenu-produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#produit #contenu-produit #quantiteEtAdd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#produit #contenu-produit #quantiteEtAdd #btn-panier {
+    margin-left: 80px;
+}
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--  Links  -->
-    <link rel="stylesheet" href="storage/{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="/storage{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Martel&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
         <ul>
             <li><a href="{{ route('home') }}">Accueil</a></li>
             <li><a href="">A propos</a></li>
-            <li><a href="">Catalogue</a></li>
-            <li><a href="">Panier</a></li>
+            <li><a href="{{route('catalog')}}">Catalogue</a></li>
+            <li><a href="{{route('cart')}}">Panier</a></li>
             <li><a href="">Connexion</a></li>
         </ul>
     </div>
@@ -41,7 +41,8 @@
 
     <!--  Catalog  -->
     <div class="container">
-        <h1>yes sir!</h1>
+        @yield('products')
+        @yield('catalog')
     </div>
 </main>
 </body>

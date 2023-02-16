@@ -1,3 +1,7 @@
+@extends('layouts.skeleton')
+
+@section('cart')
+
 <div class="products">
 
 @foreach($products as $product)
@@ -18,6 +22,6 @@
 
     <a href="index.php">Confirmer le panier</a>
 
-
-
 </div>
+
+@endsection
