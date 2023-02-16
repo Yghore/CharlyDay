@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -38,17 +39,28 @@ class CartController extends Controller
 
         $order = Order::make();
 
+        $rdvDate = $request->input('rdv_date');
+        $rdvTime = $request->input('rdv_time');
+
 
         $order->fill([
             'suiviCommande' => Str::random(12),
+            'rdv_datetime' => Carbon::parse($rdvDate . " " . $rdvTime)->format('Y-m-d HH:i:s'),
         ]);
+
 
         $order->save();
 
+        foreach ($carts as $cart){
+            $order->products()->attach(['product_id' => $cart]);
+
+        }
 
 
         // Clear the carts$carts
         $request->session()->put('carts', collect([]));
+
+
 
 
         // Redirect to confirmation page

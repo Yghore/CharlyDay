@@ -12,6 +12,12 @@ class Order extends Model
     protected $table = 'orders';
     protected $primaryKey = 'id';
 
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
+
     protected $fillable = [
         'suiviCommande'
     ];
