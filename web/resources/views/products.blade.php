@@ -10,7 +10,11 @@
             <div id="contenu-produit">
                 <h1 id="titre-produit">{{ $product->nom }}</h1>
                 <div id="desc">{!! $product->description !!}</div>
-                <div id="prix">{{ $product->prix }} €</div>
+                @if($product->poids == 0)
+                    <div id="prix">{{ $product->prix}}€/kg</div>
+                @else
+                    <div id="prix">{{ $product->prix}}€</div>
+                @endif
                 <form action="{{ route('product.add', ["id" => $product->id]) }}" method="post">
                     @csrf
                     <div id="quantiteEtAdd">
