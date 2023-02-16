@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\cartController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -16,13 +16,9 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('home');
-});
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/test', 'index')->name('test');
-    Route::get('/home', 'home')->name('home');
+    Route::get('/', 'index')->name('route');
 });
 
 
@@ -36,10 +32,12 @@ Route::controller(ProductController::class)->group(function () {
 
 Route::controller(CartController::class)->group(function (){
     Route::get('cart', 'index')->name('cart');
+    Route::get('cart/confirm', 'validateCart')->name('cart.confirm');
+    Route::get('cart/validatation', 'confirmOrder')->name('cart.validate');
 });
 
 Route::controller(CatalogController::class)->group(function (){
-    Route::get('/catalog', 'index')->name('catalog');
+    Route::get('/catalog/{page?}', 'index')->name('catalog');
 });
 
 

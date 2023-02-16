@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    protected $table = 'orders';
+    protected $primaryKey = 'id';
+
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
+
+    protected $fillable = [
+        'suiviCommande'
+    ];
+
 }

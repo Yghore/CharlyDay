@@ -9,7 +9,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $test = Categorie::all();
-        return view('test', ['test' => $test]);
+        return view('home');
     }
 }
