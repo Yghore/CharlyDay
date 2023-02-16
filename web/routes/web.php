@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -19,4 +20,8 @@ Route::get('/', function () {
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/test', 'index');
+});
+
+Route::controller(CartController::class)->group(function (){
+    Route::get('cart', 'index');
 });
