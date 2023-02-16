@@ -23,7 +23,7 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 Route::controller(\App\Http\Controllers\CatalogController::class)->group(function (){
-   Route::get('/catalog', 'index');
+    Route::get('/catalog', 'index')->name('catalog');
 });
 
 
