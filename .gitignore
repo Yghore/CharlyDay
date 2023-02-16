@@ -1,0 +1,6 @@
+web/vendor/
+web/node_modules/
+web/app/storage/
+web/public/storage
+.env
+web/composer.lock
