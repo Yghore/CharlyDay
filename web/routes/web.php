@@ -18,7 +18,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/', 'index')->name('route');
+    Route::get('/', 'index')->name('home');
 });
 
 
