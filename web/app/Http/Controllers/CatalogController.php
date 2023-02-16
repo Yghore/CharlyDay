@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class CatalogController extends Controller
 {
     public function index($page = 1){
-        $productsList = Product::paginate(5);
+        $productsList = Product::paginate($perPage = 5, $columns = ['*'], $pageName = 'page', $page);
         return view("catalog", ['products' => $productsList]);
 
     }
