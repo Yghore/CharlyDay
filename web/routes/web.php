@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -21,6 +22,15 @@ Route::get('/', function () {
 Route::controller(HomeController::class)->group(function () {
     Route::get('/test', 'index');
 });
+
+
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/product/{id}', 'index')->name('product');
+    Route::post('/product/add/{id}', 'addProductToCart')->name('product.add');
+    //Route::post('/product/remove/{id}', 'removeCart')->name('product.remove');
+
+});
+
 
 Route::controller(CartController::class)->group(function (){
     Route::get('cart', 'index');
