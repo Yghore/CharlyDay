@@ -30,16 +30,3 @@ On veut pouvoir rechercher un produit dans le catalogue et filtrage des produits
 
 ### Fonctionnalité 8 : Validation de la commande
 
-### Fonctionnalité 9 : Affichage de la liste des commandes pour l'administrateur
-
-## Gestion des comptes utilisateurs (avancé)
-
-### fonctionnalité 15 : Création d'un compte utilisateur
-
-### fonctionnalité 16 : Accès avec authentification
-
-### fonctionnalité 17 : Modification des informations personnelles
-
-### fonctionnalité Supplémentaire : Modification du mot de passe
-
-### fonctionnalité 18 : Affichage de la liste des utilisateurs pour l'administrateur
