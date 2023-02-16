@@ -5,7 +5,7 @@
     @foreach($products as $product)
         <div class="card">
             <div class="image">
-                <img src="{{ '/storage/img/'.$product->product_id.'.jpg' }}" alt="{{ $product->nom }}">
+                <img src="{{ '/storage/img/'.$product->id.'.jpg' }}" alt="{{ $product->nom }}">
             </div>
 
             <h3 class="product_title">{{ $product->nom }}</h3>
