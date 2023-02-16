@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\cartController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -35,3 +35,10 @@ Route::controller(ProductController::class)->group(function () {
 Route::controller(CartController::class)->group(function (){
     Route::get('cart', 'index');
 });
+
+Route::controller(CatalogController::class)->group(function (){
+   Route::get('/catalog/{page?}', 'index');
+});
+
+
+//Route::get('product/{id}')->name('product');
