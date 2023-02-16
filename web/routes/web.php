@@ -38,4 +38,5 @@ Route::controller(CartController::class)->group(function (){
 
 Route::controller(CatalogController::class)->group(function (){
     Route::get('/catalog/{page?}', 'index')->name('catalog');
+    Route::get('/catalog/search', 'search')->name('catalog.search');
 });

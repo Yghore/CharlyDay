@@ -14,4 +14,12 @@ class CatalogController extends Controller
         $productsList->appends(['page' => $productsList->currentPage()])->setPath(route('catalog'));
         return view("catalog", ['products' => $productsList]);
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('q');
+        $products = Product::where('nom', 'LIKE', '%'.$query.'%')->paginate(5);
+        $products->appends(['page' => $products->currentPage()])->setPath(route('catalog'));
+        return view('catalog', ['products' => $products]);
+    }
 }
