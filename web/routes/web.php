@@ -20,3 +20,10 @@ Route::get('/', function () {
 Route::controller(HomeController::class)->group(function () {
     Route::get('/test', 'index');
 });
+
+Route::controller(\App\Http\Controllers\CatalogController::class)->group(function (){
+   Route::get('/catalog', 'index');
+});
+
+
+//Route::get('product/{id}')->name('product');
