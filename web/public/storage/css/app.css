@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(38, 78, 72);
+    font-family: 'Libre Franklin', sans-serif;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #1a1a1a;
+    z-index: 1;
+}
+
+.navbar li {
+    float: left;
+    list-style-type: none;
+    margin: 30px 20px;
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.navbar li a {
+    padding: 3px 3px;
+    text-decoration: none;
+    color: rgb(244, 199, 88);
+    font-size: 20px;
+
+}
+
+.navbar li:nth-child(5) {
+    float: right;
+}
+
+.navbar li:nth-child(4) {
+    float: right;
+}
+
+
+
+.navbar li a:hover {
+    color: #F7FFF7;
+}
+
+.background-image {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("/storage/img/background_img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+/*
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    filter: blur(5px);
+    z-index: 0;
+} */
+
+.background-image__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F7FFF7;
+    text-align: center;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Martel', serif;
+    text-align: center;
+}
+
+#btn-panier {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1abc9c;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#btn-panier {
+    background-color: #148f77;
+}
+
+#btn-panier {
+    background-color: #117a65;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+
+.image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+}
+
+.product_title {
+    margin: 5px 0;
+}
+
+.dispo {
+    margin: 10px 0;
+}
+
+#price {
+    font-weight: bold;
+    color: #ff4500;
+}
+
+#quantite {
+    display : flex;
+}
