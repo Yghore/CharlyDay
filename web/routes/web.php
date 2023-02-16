@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::controller(HomeController::class)->group(function () {
     Route::get('/test', 'index');
 });
+
+Route::middleware(['auth', 'isAdmin'])->get('/validated-orders', 'OrderController@validatedOrders');
+
