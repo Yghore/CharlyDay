@@ -17,11 +17,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/test', 'index');
+    Route::get('/test', 'index')->name('test');
+    Route::get('/home', 'home')->name('home');
 });
 
 
@@ -38,7 +39,7 @@ Route::controller(CartController::class)->group(function (){
 });
 
 Route::controller(CatalogController::class)->group(function (){
-   Route::get('/catalog/{page?}', 'index');
+    Route::get('/catalog', 'index')->name('catalog');
 });
 
 
