@@ -39,10 +39,6 @@
             </div>
         </div>
 
-        <!--  Catalog  -->
-        <div class="container">
-            <h1>yes sir!</h1>
-        </div>
     </main>
 </body>
 </html>
