@@ -33,5 +33,7 @@ Route::controller(ProductController::class)->group(function () {
 
 
 Route::controller(CartController::class)->group(function (){
-    Route::get('cart', 'index');
+    Route::get('cart', 'index')->name('cart');
+    Route::get('cart/confirm', 'validateCart')->name('cart.confirm');
+    Route::get('cart/validatation', 'confirmOrder')->name('cart.validate');
 });

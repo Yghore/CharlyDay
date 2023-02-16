@@ -10,8 +10,9 @@ class ProductController extends Controller
 
     public function index($id)
     {
-        $products = Product::get()->where('product_id', $id);
-        return view('products', ['products' => $products]);
+        $product = Product::where('id', $id)->get();
+
+        return view('product', ['products' => $product]);
     }
 
 
@@ -30,7 +31,7 @@ class ProductController extends Controller
             }
             $carts->push($id);
             $request->session()->put('carts', $carts);
-            return redirect()->route('product', ['id' => $id]);
+            return redirect()->route('cart');
 
         }
 

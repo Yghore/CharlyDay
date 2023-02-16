@@ -16,7 +16,7 @@
 
     <h3>Prix total du panier : {{ $total }}</h3>
 
-    <a href="index.php">Confirmer le panier</a>
+    <a href="{{ route('cart.validate')  }}">Confirmer le panier</a>
 
 
 
