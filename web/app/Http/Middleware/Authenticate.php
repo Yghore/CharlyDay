@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Middleware;
@@ -13,5 +14,14 @@ class Authenticate extends Middleware
     protected function redirectTo(Request $request): ?string
     {
         return $request->expectsJson() ? null : route('login');
+    }
+    public function hasRole($role)
+    {
+    return $this->roles()->where('name', $role)->exists();
+    }
+
+    public function roles()
+    {
+    return $this->belongsToMany(Role::class);
     }
 }
